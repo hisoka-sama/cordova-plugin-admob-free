@@ -26,7 +26,6 @@
     </js-module>
 
     <dependency id="cordova-promise-polyfill" version="~0.0.2" />
-    <dependency id="cordova-admob-sdk" version="~0.24.1" />
 
     <platform name="android">
         <preference name="ADMOB_APP_ID" default=""/>
@@ -72,5 +71,15 @@
         </config-file>
         <header-file src="src/ios/CDVAdMob.h" />
         <source-file src="src/ios/CDVAdMob.m" />
+                <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods>
+                <pod name="Google-Mobile-Ads-SDK" spec="~> 7.65.0" />
+                <pod name="GoogleUserMessagingPlatform" spec="~> 1.2.0" />
+            </pods>
+        </podspec>
+
     </platform>
 </plugin>
