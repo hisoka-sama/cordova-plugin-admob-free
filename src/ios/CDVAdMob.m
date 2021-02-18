@@ -549,7 +549,9 @@
 
 - (GADRequest*) __buildAdRequest {
     GADRequest *request = [GADRequest request];
-
+    
+    NSLog(@"Received ad successfully %@ " , [GADRequest sdkVersion] );
+    
     if (self.isTesting) {
         NSString* deviceId = [self __getAdMobDeviceId];
         request.testDevices = @[ kGADSimulatorID, deviceId, [deviceId lowercaseString] ];
